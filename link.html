@@ -12,8 +12,8 @@
         padding: 0;
        }
        .container {
-        max-width: 900x;
-        margin: 40px;
+        max-width: 1600px;
+        margin: 0 auto;
         padding: 0 20px;
        }
        h1{
@@ -164,23 +164,36 @@
         color: #777;
         margin-top: 4px;
     }
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    .grid-3-col{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
 
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Workshop: Various Links</h1>
-        <p>เรียนรู้ลิงก์หลายรูปแบบ พร้อมตัวอย่างและแบบฝึกหัด</p>  
+        <p style="text-align: center;">เรียนรู้ลิงก์หลายรูปแบบ พร้อมตัวอย่างและแบบฝึกหัด</p>  
+
+        <div class="card-grid">
+
         <!-- card 1 : -->
          <div class="card module-1">
             <h2>1. External Links</h2>
             <div class="card2 link-item">
-                <a href="">Visit Wikipedia</a>
-                <p><code>terget="_blamk</code>เปิดในลิงค์ใหม่</p>
+                <a href="https://www.wikipedia.org/ " terget="_blamk">Visit Wikipedia</a>
+                <p><code>terget="_blamk"</code>เปิดในลิงค์ใหม่</p>
              </div>   
              <div class="card2 link-item">
-                <a href="">Visit Google</a>
-                <p><code>terget="_self</code>เปิดในลิงค์เดิม</p>
+                <a href="https://www.google.com/?hl=th&zx=1767586547012&no_sw_cr=1" terget="_self">Visit Google</a>
+                <p><code>terget="_self"</code>เปิดในลิงค์เดิม</p>
             </div>
          </div>
 
@@ -193,8 +206,8 @@
                 &lt;a href=S"#jump"&gt;Jump to Section&lt;/a&gt;
                 &lt;h3 id="jump"&gt;This is the jump target&lt;/h3&gt;
             </pre>
-            <a href="">Click to jump</a>
-            <h3>This is the jump target</h3>
+            <a href="#jump">Click to jump</a>
+            <h3 id="jump" style="margin-top: 30px;">This is the jump target</h3>
          </div>
 
          <!-- card 3 : -->
@@ -205,7 +218,7 @@
                 &lt;a href="mailto:student@example.com?subject=Hello"&gt;
                 Send an Email&lt;/a&gt;
             </pre>
-            <a href="">Send an Email</a>
+            <a href="mailto:674230038@webmail.npru.ac.th?subject=ddddddddddddddddddddddd ดีมาก">Send an Email</a>
           </div>
          <!-- card 4 : -->
           <div class="card module-4">
@@ -214,8 +227,10 @@
                 
                 &lt;a href="files/sample.txt" download&gt;Download File&lt;/a&gt;
             </pre>
-            <a href="sample.txt"Download class="download-btn">Download Text File</a>
+            <a href="mi.png"Download class="download-btn">Download Text File</a>
             <div class="note1">ต้องมีไฟล์ในโฟลเดอร์จึงจะดาวโหลดได้จริง</div>
+        </div>
+
         </div>
 
           <!-- card 5 : -->
@@ -238,8 +253,41 @@
                 - เหมาะทั้งลิงก์ ภายในและภายนอกเว็บ
                 - ผูกกับ window โดยตรง
             </pre>
-            <a href="index.html" target="_blank"><button>HTML Tutorial</button></a>
-            <a href="https://store.steampowered.com/"target="_blank"><button>Visit Website</button></a>
+
+            <div class="grid-3-col">
+                <div>
+                    <p>ปุ่ม<code>document.location</code></p>
+                    <button onclick="document.location='index.html'">HTML Tutorial</button>
+                </div>
+
+                <div>
+                    <p>ปุ่ม<Code>location.href</Code></p>
+                    <button onclick="location.href='https://www.example.com'">Visit Website</button>
+                </div>
+
+                <div>
+                    <p>ปุ่มตัวอย่างจาก</p>
+                    <button>SUBSCRIBE</button>
+                </div>
+
+                <div>
+                    <p>เพิ่มขอบทอง</p>
+                    <button>SUBSCRIBE</button>
+                </div>
+
+                <div>
+                    <p>เพิ่มอนิเมชั่นเมื่อชี้</p>
+                    <button>SUBSCRIBE</button>
+                </div>
+
+                <div>
+                    <p>ปุ่มสีดำ ขอบทอง แสงวิ่ง</p>
+                    <button>SUBSCRIBE</button>
+                </div>
+
+            </div>
+
+
         </div>
 
             <!-- card 6 : -->
@@ -256,8 +304,7 @@
                 
             </div>
 
-
-
+        
 
     </div>
 </body>
