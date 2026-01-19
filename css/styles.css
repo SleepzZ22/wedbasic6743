@@ -6,62 +6,90 @@
             padding: 0;
         }
 
+        html {
+            scroll-padding-top: 190px;
+            scroll-behavior: smooth;
+        }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.8;
             background-color: #2c2c2c;
             color: #292928;
+
+            background-image: url("../uwu.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+
         }
 
         .container {
             max-width: 1200px;
-            background-color: rgb(53, 53, 53);
+
             margin: 190px auto 20px;
         }
 
-        .card{
-        background: #ffffff;
-        padding: 25px 30px;
-        border-radius: 12px;
-        margin-bottom: 25px;
-        border-top: 4px solid #c4005a;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-       }
-       .card.module-1{
-        border-top-color:#0074c2; 
-       }
-       .card.module-2{
-        border-top-color:#00a884; 
-       }
-       .card.module-3{
-        border-top-color:#ff9800 ; 
-       }
-       .card.module-4{
-        border-top-color:#8e24aa; 
-       }
-       .card.module-5{
-        border-top-color:#ff7043; 
-       }
-        .card.module-6{
-        border-top-color:#ff4343; 
-       }
-        .card.module-7{
-        border-top-color:#ed73d1; 
-       }
-        .card.module-8{
-        border-top-color:#ca59e1; 
-       }
-       
+        .card {
+            background: #ffffff;
+            padding: 25px 30px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border-top: 4px solid #c4005a;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
 
+        .card.module-1 {
+            border-top-color: #0099ff;
+        }
 
+        .card.module-2 {
+            border-top-color: #59b9e2;
+        }
 
-        pre {}
+        .card.module-3 {
+            border-top-color: #ff9800;
+        }
 
-        .note {}
+        .card.module-4 {
+            border-top-color: #8e24aa;
+        }
 
-        .note::before {}
+        .card.module-5 {
+            border-top-color: #ff7043;
+        }
 
+        .card.module-6 {
+            border-top-color: #ff4343;
+        }
+
+        .card.module-7 {
+            border-top-color: #ed73d1;
+        }
+
+        .card.module-8 {
+            border-top-color: #ca59e1;
+        }
+
+        pre {
+            padding: 12px;
+            font-size: 14px;
+            overflow-x: auto;
+            line-height: 25px;
+        }
+
+        .note {
+            border-left: 4px solid #e0e0e0;
+            padding-left: 12px;
+            color: #666;
+            margin-top: 12px;
+            font-size: 14px;
+        }
+
+        .note::before {
+            content: "💡 ";
+        }
 
         code {
             background-color: aliceblue;
@@ -69,20 +97,27 @@
             padding: 2px 4px;
         }
 
-        .badge {}
+        .badge {
+            color: #63b8f0;
+            border-radius: 14px;
+            background-color: rgb(211, 211, 241);
+            padding: 3px 8px;
+            font-size: 0.8rem;
+            vertical-align: middle;
+            margin: 5px;
+        }
 
 
         /* Images (global safe defaults) */
-        img {}
-
-
-
-
+        img {
+            max-width: 100%;
+            height: auto;
+        }
 
 
         /* CSS For Group 1: Header  */
         header {
-            background-color:rgb(214, 214, 214);
+            background-color: rgb(216, 236, 252);
             padding: 20px;
             box-shadow: #c40c0c 5px 5px 5px;
             display: flex;
@@ -91,83 +126,147 @@
 
             /* fixed header */
             position: fixed;
-            top:0;
+            top: 0;
             width: 100%;
         }
-        h1{
-            color:#2c2c2c;
-        }
-        .list-menu {
-            display: flex;
-            list-style:none;
-            
-            gap: 20px;
 
+        h1 {
+            color: #2c2c2c;
+        }
+
+        .list-menu ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
             margin: 0;
-            padding: 0;
         }
+
         .list-menu li {
-            background-color:red;
-            padding: 10px 15px;
-            border-radius: 7px;
+            margin-top: 15px;
         }
-        .list-menu li a {
+
+        .list-menu li:hover {
+            transform: translatey(-5px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 10px #000000;
+        }
+
+        .list-menu a {
             text-decoration: none;
             color: aliceblue;
             font-weight: bold;
+            background: linear-gradient(135deg, black, red);
+            padding: 8px 12px;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px #000000;
         }
-        .list-menu li:hover {
-            background-color: #e2c347;
+
+        .list-menu a:hover {
+            background: linear-gradient(135deg, rgb(23, 140, 243), black);
+
         }
 
         /* CSS For Group 2: Card 1: Basics  */
+        .position {
+            display: flex;
+            border: 2px dashed;
+            padding: 12px;
+            margin-bottom: 12px;
+            align-items: center;
+            ;
+        }
 
-        /* CSS For Group 3: Card 2: Resize & aspect  */
-        .positon {}
+        .position.laft {
+            justify-content: flex-start;
+        }
+
+        .position.center {
+            justify-content: center;
+        }
+
+        .position.right {
+            justify-content: flex-end;
+        }
 
         .img_small {
-            width: 10%;
+            width: 100px;
+            height: auto;
+
+
         }
+
+        /* CSS For Group 3: Card 2: Resize & aspect  */
+
         .img-fixed {
-                width: 260px;
-                height: 160px;
-                object-fit: cover;
-                }
+            width: 560px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 1px #000000 solid;
+        }
 
         /* CSS For Group 4: Card 3: Object fit  */
-         .obj-fit-image{
-                width: 800px;
-                height: 200px;
-                border: 1px solid black;
-                }
-                .obj-fit-image.contain { object-fit: contain; }
-                .obj-fit-image.fill { object-fit: fill; }
-                .obj-fit-image.cover { object-fit: cover; }
+        .obj-fit-image {
+            width: 800px;
+            height: 200px;
+            border: 1px solid black;
+        }
+
+        .obj-fit-image.contain {
+            object-fit: contain;
+        }
+
+        .obj-fit-image.fill {
+            object-fit: fill;
+        }
+
+        .obj-fit-image.cover {
+            object-fit: cover;
+        }
 
         /* CSS For Group 5: Card 4: Image as Link  */
 
         /* CSS For Group 6: Card 5: Gallery  */
-                .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-                .gallery img { height: 120px; object-fit: cover; }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .gallery img {
+            height: 120px;
+            width: 100%;
+            object-fit: cover;
+        }
 
         /* CSS For Group 7: Card 6: Responsive  */
-            img { max-width: 100%; height: auto; } 
+        img {
+            max-width: 100%;
+            height: auto;
+        }
 
         /* CSS For Group 8: Card 7: Figure & Caption + Task  */
+        figure {
+            text-align: center;
+
+        }
 
 
         /* CSS For Group 9: Card 8: Local file tips  */
-
+        .bg-img {
+            background-image: url("../uwu.png");
+        }
 
         /* CSS For Group 10: Back to Tutorial */
-            .back-link{
-                    display: block;
-                    margin-top: 15px;
-                    text-decoration: none;
-                    color: blue;
-                    font-weight: bold;
-                    background-color:cornflowerblue;
-                    text-align: center;
-                    border-radius: 10px;
-                    padding: 8px 0;
-                }
+        .back-link {
+            display: block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+            background-color: cornflowerblue;
+            text-align: center;
+            border-radius: 10px;
+            padding: 8px 0;
+        }
+        
