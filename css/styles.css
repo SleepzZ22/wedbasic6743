@@ -17,7 +17,7 @@
             background-color: #2c2c2c;
             color: #292928;
 
-            background-image: url("../uwu.png");
+            background-image: url("/img/uwu.png");
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
@@ -254,7 +254,7 @@
 
         /* CSS For Group 9: Card 8: Local file tips  */
         .bg-img {
-            background-image: url("../uwu.png");
+            background-image: url("/img/uwu.png");
         }
 
         /* CSS For Group 10: Back to Tutorial */
