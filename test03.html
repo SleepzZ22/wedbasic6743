@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="test03" content="width=device-width, initial-scale=1.0">
+    <title>parames</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1c0042;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto 20px;
+        }
+
+        header {
+            background-color: rgb(102, 120, 253);
+            padding: 20px;
+            text-align: center;
+            font-size: 40px;
+            color: #fff;
+        }
+
+        .card {
+            background-color: rgb(3, 54, 99);
+            border-radius: 18px;
+            padding: 35px;
+            margin-top: 40px;
+        }
+
+        .card1 {
+            background-color: rgb(102, 120, 253);
+            padding: 30px;
+            border-radius: 18px;
+        }
+
+        .aa:hover {
+            transform: scale(1.05);
+            transition: 0.3s ease;
+        }
+
+        li {
+            list-style: none;
+
+        }
+
+        .manu {
+            justify-content: center;
+            display: flex;
+            gap: 80px;
+            font-size: 16px;
+        }
+
+        .manu a {
+            text-decoration: none;
+            color: #000000;
+            background-color: rgb(102, 120, 253);
+            padding: 20px;
+            border-radius: 18px;
+
+        }
+
+        .manu a:hover {
+            box-shadow: 7px 7px 7px #303030;
+            transition: 0.3s ease;
+        }
+
+        .manu li:hover {
+            transition: 0.3s ease;
+            transform: scale(1.05);
+        }
+
+        .data {
+            display: flex;
+            font-size: 16px;
+            color: #fff;
+            line-height: 35px;
+            gap: 30px;
+        }
+
+        .data a {
+            text-decoration: none;
+            border: 2px solid rgba(0, 0, 0, 0.2)
+        }
+
+        .name {
+            font-size: 32px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+
+        .box {
+            display: flex;
+        }
+
+        .I {
+            height: 220px;
+            width: 220px;
+            border-radius: 100%;
+            margin: auto;
+            object-fit: cover;
+            border: solid 2px black;
+        }
+
+        .grade {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+            color: #fff;
+        }
+
+        .grade li {
+            background-color: rgb(102, 120, 253);
+            padding: 20px;
+            font-size: 24px;
+            border-radius: 18px;
+            width: 900px;
+            text-align: center;
+        }
+
+        .grade li:hover {
+            transition: 0.3s ease;
+            box-shadow: 7px 7px 7px #363636;
+            transform: scale(1.05)
+        }
+
+        span {
+            color: rgb(253, 102, 102);
+        }
+
+        .card2 {
+            margin-top: 40px;
+            background-color: rgb(102, 120, 253);
+            font-size: 40px;
+            box-shadow: 7px 7px 7px #363636;
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        footer {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 22px;
+            margin-inline-end: end;
+        }
+    </style>
+</head>
+<header>
+    <p>รายงานผลเกรด</p>
+</header>
+
+<body>
+    <div class="container">
+        <div class="card" dir="1">
+            <ul class="manu">
+                <li><a href="#1">ข้อมูลนักศึกษา</a></li>
+                <li><a href="#2">ผลการเรียน</a></li>
+                <li><a href="#3">ติดต่อ</a></li>
+            </ul>
+        </div>
+
+        <div class="card" id="2">
+            <div class="box">
+                <div class="aa">
+                    <div class="card1">
+                        <div class="name">
+                            <p>MR.Poramet maiprasoet</p>
+                            <hr>
+                        </div>
+                        <section class="data">
+                            <ul>
+                                <li>รหัสนักศึกษา :</li>
+                                <li>ชื่อ-นามสกุล :</li>
+                                <li>หมู่เรียน :</li>
+                                <li>อาจารย์ที่ปรึกษา :</li>
+                                <li>githud :</li>
+                            </ul>
+                            <ul>
+                                <li>674230020</li>
+                                <li>ปรเมศ ไม้ประเสริฐ</li>
+                                <li>67/43</li>
+                                <li>อ.พิชยา สุขปลั่ง</li>
+                                <li><a href="https://github.com/SleepzZ22/wedbasic6743"
+                                        target="_blank">https://github.com/SleepzZ22/wedbasic6743</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+                <img src="../img/eiei.jpg" alt="" class="I">
+            </div>
+        </div>
+
+        <section id="2">
+            <ul class="grade">
+                <li>
+                    <p>ปี 1 เทอม 1 : <span>3.08</span></p>
+                </li>
+                <li>
+                    <p>ปี 1 เทอม 2 : <span>3.00</span></p>
+                </li>
+                <li>
+                    <p>ปี 2 เทอม 1 : <span>3.33</span></p>
+                </li>
+            </ul>
+        </section>
+        <div class="card2">
+            <P>เกรดเฉลี่ยสะสม : 3.14</P>
+        </div>
+
+    </div>
+</body>
+
+<footer>
+    <p>2004 webmaster by poramet id 674230020</p>
+    <p>Nakhon pathom Rajabhtat University</p>
+</footer>
+
+</html>
