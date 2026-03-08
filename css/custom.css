@@ -343,6 +343,7 @@ a:hover {
 
   margin: 0 auto;
 }
+
 .Receive-news2 {
   background: linear-gradient(45deg, #7e06ff 0%, #b805ff 100%);
   padding: 20px;
@@ -403,7 +404,6 @@ a:hover {
   color: #002faf;
   font-size: 1.6rem;
   font-weight: 700;
-  text-shadow: 0 5px 8px #4f4e4ead;
 }
 
 .Receive-news-title {
@@ -412,7 +412,6 @@ a:hover {
   color: #ffffff;
   font-size: 0.98rem;
   font-weight: 700;
-  text-shadow: 0 5px 8px #4f4e4ead;
 }
 
 .form-row {
@@ -471,6 +470,7 @@ a:hover {
   font-weight: 600;
   margin-bottom: 18px;
 }
+
 .form-button3 {
   width: 100%;
   border: none;
@@ -504,4 +504,140 @@ a:hover {
 
 .widget+.widget {
   margin-top: 10px;
+}
+
+/* === ผู้เขียนแนะนำตัว  === */
+.widget-title {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.auther-photo {
+  background-color: rgb(133, 220, 247);
+  /* padding: 70px 0; */
+  height: 150px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0;
+  border-radius: 4px;
+}
+
+.btn-facebook {
+  background-color: #2a6fdd;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.widget-exp {
+  background-color: #a2a2a258;
+  color: #2e2d2d;
+  text-align: center;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.advert {
+  background-color: #77777787;
+  color: #000000;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* gold */
+:root {
+  --line: rgb(15, 3, 235);
+  --bg1:rgb(110, 142, 255);
+  --bg2:rgb(177, 199, 241);
+  --bg3:rgb(202, 216, 245);
+  --text-green:green;
+  --text-red:red;
+}
+
+.warp-gold-table{
+  background: var(--bg2);
+  margin: 0 auto;
+  border-radius: 16px;
+  border:2px solid var(--line) ;
+
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.gold-table {
+  border: 1px solid var(--line);
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+.gold-table thead th{
+  background-color: var(--bg1);
+}
+.gold-table tbody th{
+  background-color: var(--bg1);
+}
+.gold-table th,
+.gold-table td {
+  border: 1px solid var(--line);
+  padding:10px 2px;
+}
+.gold-table .total th,.gold-table .total td {
+  background: var(--bg3);
+}
+
+.num-center {
+  text-align: center;
+}
+
+.num-right {
+  text-align: right;
+}
+
+.red-text {
+  color: red;
+}
+
+.green-text {
+  color: green;
+}
+
+.icon {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+}
+ 
+.up {
+  border-bottom: 10px solid var(--text-green);
+}
+
+.down {
+  border-top: 10px solid var(--text-red);
+}
+
+.t-big {
+  font-weight: 600;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #000000;
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+footer a {
+  color: #1e8bc3;
 }
