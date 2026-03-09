@@ -41,14 +41,19 @@
     <!--Navber-->
     <nav class="main-nav">
         <div class="wrapper">
-            <ul class="nav-menu">
-                <li><a href="" class="active">Home</a></li>
-                <li><a href="">AI Technology</a></li>
-                <li><a href="">Machine Learning</a></li>
-                <li><a href="">Deep Learning</a></li>
-                <li><a href="">AI Tools</a></li>
-                <li><a href="">AI News</a></li>
-            </ul>
+            <div id="hamburger-menu">
+                <span></span>
+            </div>
+            <div id="menu">
+                <ul class="nav-menu">
+                    <li><a href="" class="active">Home</a></li>
+                    <li><a href="">AI Technology</a></li>
+                    <li><a href="">Machine Learning</a></li>
+                    <li><a href="">Deep Learning</a></li>
+                    <li><a href="">AI Tools</a></li>
+                    <li><a href="">AI News</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -97,7 +102,7 @@
                 <!-- lefe side -->
                 <main class="post-list">
                     <!-- card1 -->
-                    <div class="card">
+                    <div class="card orider-box-image">
                         <p class="card-headline">CATEGORY ARCHIVES: <strong>RESPONSIVE DESIGN</strong></p>
 
                         <article>
@@ -127,7 +132,7 @@
                         </article>
                     </div>
                     <!-- card2 -->
-                    <div class="card">
+                    <div class="card orider-box-table">
                         <p class="card-headline">CATEGORY ARCHIVES: <strong>CSS DISPLAY PROPERTY</strong></p>
 
                         <article>
@@ -191,19 +196,10 @@
                                 </tbody>
                             </table>
 
-
-
-
-
-
                             <p class="post-description">สรุป: display: block เหมาะสำหรับโครงสร้างหลักของหน้าเว็บ ส่วน
                                 display: inline-block
                                 เหมาะสำหรับการสร้างเมนู หรือองค์ประกอบที่ต้องเรียงต่อกัน
                             </p>
-
-
-
-
 
                             <div class="post-footer">
                                 <span>Tags:</span>
@@ -213,7 +209,7 @@
                         </article>
                     </div>
                     <!-- card3 -->
-                    <div class="card">
+                    <div class="card orider-box-contact">
                         <h2 class="contact-title">📞 ติดต่อเรา</h2>
                         <div class="contact-form-main">
                             <form action="" method="">
@@ -295,9 +291,9 @@
                 </main>
 
                 <!-- right side -->
-                <aside>
+                <aside class="sidebar-w">
                     <!-- Widget 01 -->
-                    <div class="widget">
+                    <div class="widget order-w-intro">
                         <div class="widget-title">สวัสดีครับ ยินดีต้อนรับ</div>
                         <p class="post-description">
                             ผมชื่อ Poramet เขียนบล็อกเกี่ยวกับ Startup การตลาด การเขียนโปรแกรม และเทคโนโลยี AI สำหรับ
@@ -308,7 +304,7 @@
                         <a href="" class="btn-facebook">กดติดตามใน Facebook</a>
                     </div>
                     <!-- Widget 02 -->
-                    <div class="widget">
+                    <div class="widget order-w-f-green">
                         <div class="Receive-news1">
                             <h2 class="Receive-news-title">📧 รับข่าวสารใหม่</h2>
                             <div class="form-group">
@@ -335,7 +331,7 @@
                         </div>
                     </div>
                     <!-- Widget 03 -->
-                    <div class="widget">
+                    <div class="widget order-w-f-purple">
                         <div class="Receive-news2">
                             <h2 class="Receive-news-title">💬 ติดต่อด่วน</h2>
                             <div class="form-group">
@@ -365,7 +361,7 @@
                         </div>
                     </div>
                     <!-- Widget 04 -->
-                    <div class="widget">
+                    <div class="widget order-w-fb">
                         <div class="widget-title">Poramet</div>
                         <div class="widget-exp">
                             กล่อง Facebook Like (ตัวอย่าง)
@@ -373,7 +369,7 @@
                         </div>
                     </div>
                     <!-- Widget 05 -->
-                    <div class="widget">
+                    <div class="widget order-w-sponsor">
                         <div class="widget-title">Sponsor</div>
                         <div class="advert">พื้นที่โฆษณา / วิดีโอ</div>
                     </div>
@@ -460,10 +456,10 @@
                                 <!-- 5   -->
                                 <tr class="total">
                                     <th>ทั้งปี</th>
-                                    <td class="num-center green-text t-big">+14,350 <span class="icon up"></span></td>
+                                    <td class="num-center green-text"> <span class="icon up"></span>+14,350</td>
                                     <td class="num-right t-big">64,550</td>
                                     <td class="num-right t-big">81,950</td>
-                                    <td class="num-center green-text t-big">+22,550 <span class="icon up"></span></td>
+                                    <td class="num-center green-text"> <span class="icon up"></span>+22,550</td>
                                     <td class="num-right t-big">42,550</td>
                                     <td class="num-right t-big">67,400</td>
                                 </tr>
@@ -482,10 +478,32 @@
     </div>
 
     <!--Footer-->
+
     <footer>
         <p class="footer">© 2025 Suksawat — All rights reserved. <br>
             Designed for educational/demo purposes • <a href="">Contact</a></p>
     </footer>
+    <script>
+        var burgerMenu = document.getElementById('hamburger-menu');
+        var overlay = document.getElementById('menu');
+
+        burgerMenu.addEventListener('click', function () {
+            this.classList.toggle("close");
+            overlay.classList.toggle("overlay");
+        });
+
+        // ปิดเมนูเมื่อกดลิงก์
+        var menuLinks = document.querySelectorAll('#menu a');
+
+        menuLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                burgerMenu.classList.remove("close");
+                overlay.classList.remove("overlay");
+            });
+        });
+
+
+    </script>
 
 </body>
 

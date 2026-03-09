@@ -92,7 +92,7 @@ a:hover {
 
 .nav-menu li a:hover,
 .nav-menu li a.active {
-  background-color: rgb(0, 94, 216);
+  background-color: rgb(41, 101, 231);
 }
 
 .hero-conten {
@@ -555,40 +555,46 @@ a:hover {
 /* gold */
 :root {
   --line: rgb(15, 3, 235);
-  --bg1:rgb(110, 142, 255);
-  --bg2:rgb(177, 199, 241);
-  --bg3:rgb(202, 216, 245);
-  --text-green:green;
-  --text-red:red;
+  --bg1: rgb(110, 142, 255);
+  --bg2: rgb(177, 199, 241);
+  --bg3: rgb(202, 216, 245);
+  --text-green: green;
+  --text-red: red;
 }
 
-.warp-gold-table{
+.warp-gold-table {
   background: var(--bg2);
   margin: 0 auto;
   border-radius: 16px;
-  border:2px solid var(--line) ;
+  border: 2px solid var(--line);
 
   overflow: hidden;
   margin-bottom: 18px;
 }
+
 .gold-table {
   border: 1px solid var(--line);
   border-collapse: collapse;
   width: 100%;
   text-align: center;
 }
-.gold-table thead th{
+
+.gold-table thead th {
   background-color: var(--bg1);
 }
-.gold-table tbody th{
+
+.gold-table tbody th {
   background-color: var(--bg1);
 }
+
 .gold-table th,
 .gold-table td {
   border: 1px solid var(--line);
-  padding:10px 2px;
+  padding: 10px 2px;
 }
-.gold-table .total th,.gold-table .total td {
+
+.gold-table .total th,
+.gold-table .total td {
   background: var(--bg3);
 }
 
@@ -601,11 +607,11 @@ a:hover {
 }
 
 .red-text {
-  color: red;
+  color: var(--text-red);
 }
 
 .green-text {
-  color: green;
+  color: var(--text-green);
 }
 
 .icon {
@@ -615,7 +621,7 @@ a:hover {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
 }
- 
+
 .up {
   border-bottom: 10px solid var(--text-green);
 }
@@ -624,7 +630,7 @@ a:hover {
   border-top: 10px solid var(--text-red);
 }
 
-.t-big {
+.total {
   font-weight: 600;
 }
 
@@ -640,4 +646,156 @@ a:hover {
 
 footer a {
   color: #1e8bc3;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* REPONSIVE */
+/* สำหลับหน้าจอ 922px */
+@media (max-width:922px) {
+  .site-header {
+    background-color: yellow;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* สำหลับหน้าจอ 768px */
+@media (max-width:768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .site-header {
+    background-color: rgb(0, 255, 0);
+  }
+
+  .hero-grid {
+    grid-template-columns: repeat(1, minmax(350px, 1fr));
+
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+  .nav-menu li {
+    border: #002faf solid 1px;
+  }
+
+  .form-checkbox-group {
+    flex-direction: column;
+  }
+}
+
+/* สำหลับหน้าจอ 576px */
+@media (max-width:576px) {
+  .site-header {
+    background-color: rgb(255, 0, 0);
+  }
+
+  /*hamburger menu */
+  #hamburger-menu {
+    display: block;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    z-index: 1000;
+  }
+
+  /* วาดเส้นแฮมเบอเกอร์ */
+  #hamburger-menu span,
+  #hamburger-menu span:after,
+  #hamburger-menu span:before {
+    background-color: #ffffff;
+    height: 3px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    content: "";
+
+    transition: all 0.3s ease;
+  }
+
+  #hamburger-menu span {
+    top: 13px;
+  }
+
+  #hamburger-menu span:before {
+    top: -8px;
+  }
+
+  #hamburger-menu span:after {
+    top: 8px;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  /* เป็นการสร้างเส้น X */
+  #hamburger-menu.close span::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  #hamburger-menu.close span {
+    background: transparent;
+  }
+
+  #hamburger-menu.close span::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  #menu.overlay {
+    display: block;
+  }
+
+  /* สลับตำแหน่งไอเท็ม */
+  .orider-box-image {
+    order: 3;
+  }
+
+  .orider-box-table {
+    order: 1;
+  }
+
+  .orider-box-contact {
+    order: 2;
+  }
+/* //////////////////////////////////////////////////////////////////////////////////// */
+  .sidebar-w {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .order-w-intro {
+    order: -5;
+  }
+
+  .order-w-f-green {
+    order: -1;
+  }
+
+  .order-w-f-purple {
+    order: -2;
+  }
+
+  .order-w-fb {
+    order: -4;
+  }
+
+  .order-w-sponsor {
+    order: -3;
+  }
 }
